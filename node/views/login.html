@@ -1,0 +1,66 @@
+<html lang="en" ng-app="formApp" >
+<head>
+  <title>Dashboard login page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="angular.min.js"></script>
+  </head>
+<body ng-controller="ValidationCtrl">
+<div class="container" id="formID">
+  <form class="form-horizontal" name="loginForm" validate> 
+      <div class="form-heading">
+        <h2>Sign In</h2>
+      </div>
+      <div class="form-group">
+        <input type="name" class="form-control" placeholder="Username" name="name" ng-model="user.name" required/>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" name="password" ng-model="user.password" required/>
+      </div>
+      <div>
+      <button class="btn btn-default pull-right" ng-disabled="loginForm.$invalid" data-ng-click="clickedHere()">Sign In</button>
+      </div>
+      <div>
+      <p class="text-danger" id="messageID">credentials incorrect try again</p>
+      </div>
+  </form>
+        
+</div>
+  <script>
+        var myApp = angular.module("formApp",[]);
+      myApp.controller("ValidationCtrl",function($scope)
+      { 
+      
+      $('#wrapper').hide();
+      $('#messageID').hide();
+
+      $scope.user = {};
+        $scope.clickedHere = function(){
+            if($scope.user.name == 'admin' && $scope.user.password == 'p@ssw0rd')
+            {
+              //$('#formID').hide();
+              //$('#wrapper').show();
+      sessionStorage.name = "admin" ;
+      sessionStorage.password ="p@ssw0rd" ;
+              location.href = "svg.html";
+
+            }
+            
+             else
+           $('#messageID').show();
+
+
+          
+            
+        
+        }
+      });
+  
+   </script>
+</body>
+</html>
+

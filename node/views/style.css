@@ -1,0 +1,45 @@
+body {
+  background-color: azure;
+  margin: 40px 0;
+}
+.form-horizontal {
+
+  height: 291px;
+  max-width: 460px;
+    margin: auto;
+    border: 16px solid #eee;
+  margin-top: 5%;
+    background-color: aliceblue;
+  }
+  &:after {
+    
+    display: table;
+    clear: both;
+  }
+  .form-heading {
+    background: #3f5f82;
+    padding: 8px 15px;
+  }
+    h2 {
+      color: #fff;
+      margin: 0;
+    }
+  
+  .form-group {
+    max-width: 100%;
+    margin: auto;
+    margin: 15px;
+
+}
+    .form-control:&focus {
+      box-shadow: none;
+    }
+  #messageId{
+    margin-left: 6%;
+  }
+  .btn {
+   margin-right: 36px;
+    margin-bottom: 106px;}
+   h2{
+    color: white;
+   }
