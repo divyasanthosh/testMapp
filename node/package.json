@@ -1,0 +1,27 @@
+{
+
+  "name": "testMapp",
+
+  "version": "1.0.0",
+
+  "description": "",
+
+  //"main": "node-cmd.js",
+
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+
+  "author": "",
+
+  "license": "ISC",
+
+  "devDependencies": {
+    "express" : ">= 4.15.4",
+    "ejs" : ">= 2.5.7"
+},
+"engine": "node 0.4.1"
+
+}
