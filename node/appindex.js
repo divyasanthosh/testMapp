@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+// user login
 
 app.use(express.static(__dirname + '/views'));
 
